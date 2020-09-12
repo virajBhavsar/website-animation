@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+user-select:none;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(#060d31, #00051b);
+}
+h1 {
+  color: #bcc3ff;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+}
+.stars {
+  height: 80vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.stars img {
+  transform: translateX(-100%);
+  width: 300px;
+  position: absolute;
+  right: 0;
+  opacity: 0;
+}
+
+.t1 {
+  top: 10%;
+  animation: throw 4s infinite 0s;
+}
+.t2 {
+  top: 20%;
+  animation: throw 4s infinite 2s;
+}
+
+.t3 {
+  top: 30%;
+  animation: throw 4s infinite 3s;
+}
+
+.t4 {
+  top: 40%;
+  animation: throw 4s infinite 2.5s;
+}
+
+.t5 {
+  top: 50%;
+  animation: throw 2.5s infinite 3s;
+  z-index: 3;
+}
+
+.t6 {
+  top: 60%;
+  animation: throw 4s infinite 3.5s;
+}
+
+.t7 {
+  top: 70%;
+  animation: throw 2s infinite 4s;
+  z-index: 3;
+}
+
+.t8 {
+  top: 80%;
+  animation: throw 5s infinite 1.7s;
+}
+
+.t9 {
+  top: 90%;
+  animation: throw 4s infinite 1.2s;
+}
+
+@keyframes throw {
+  from {
+    opacity: 0.7;
+    left: 0%;
+  }
+  to {
+    opacity: 1;
+    left: 130%;
+  }
+}
+
+/* rocket */
+
+.rocket svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(120deg);
+  width: 400px;
+}
+#flame {
+  animation: flame 1s linear alternate infinite;
+  transform-origin: 75%;
+}
+@keyframes flame {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(30deg);
+  }
+}
+
+.shining {
+  position: relative;
+  width: 80%;
+  height: 80vh;
+  margin: auto;
+}
+.shining div {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 20px white;
+  transform-origin: center;
+}
+
+@keyframes blow {
+  from {
+    width: 4px;
+    height: 4px;
+    box-shadow: 0 0 20px white;
+  }
+  to {
+    width: 2px;
+    height: 2px;
+    box-shadow: 0 0 5px white;
+  }
+}
